@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style.css">
+    <title>Log</title>
+</head>
+<body>
+    <main class="container">
+        <div class="box">
+            <h2>Iniciar Seccion</h2>
+        </div>  
+        
+        <form action="/" method="post" >
+            <div class="input_box">
+                <input name="name" type="text" class="name" required>
+                <label>Usuario</label>
+            </div>
+            <div>
+                <input name="pass" type="text" class="password">
+                <label>Contrasena</label>
+    
+                <div class="password_checkbox"><input type="submit" value="Ingresar"><p>Show Password</p></div>
+                
+            </div>   
+        </form>
+    </main>
+
+     
+    <div>
+        % if defined('log_fail'):
+            <p>{{log_fail}}</p>
+        %end
+    </div>
+
+        
+</body>
+</html>

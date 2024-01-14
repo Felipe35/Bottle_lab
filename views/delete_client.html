@@ -1,0 +1,68 @@
+% rebase('layout.html', title='Borrar Cliente')
+<main class="delete_main_container">
+    <div class="delete_container">
+        <div class="delete_box">
+              <h3>Eliminacion de Cliente</h3>
+            <form action="/show_client_delete" method="post" >
+                <div class="delete_client_box_user search_box">
+                    <p>Ingresa nombre del cliente a eliminar</p>
+                    <input name="full_name" type="text" class="delete_name">
+                    <label>Paciente</label>
+                    <button class="delete_client_btn" type="submit">Ingresar</button>
+                </div>
+            </form>
+
+            
+            <form action="/delete_client" method="post" >
+                <div class="delete_client_box_user search_box">
+                    <p>Por favor ingresa el ID del cliente a eliminar</p>
+                    <input name="client_id" type="text" class="delete_id">
+                        <label>Paciente ID</label>
+                    <button class="delete_client_btn" type="submit">Borrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+        <div class="delete_response_container">
+            % if defined('blank'):
+                <p class="delete_response_blank">{{blank}}</p>
+
+            %elif defined('no_exists'):
+                <p class="delete_response_no_exists">Client {{no_exists}} no existe</p>
+
+            %elif defined('rows'):
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Cliente ID</th>
+                        <th>Nombre</th>
+                        
+                    </tr>
+                </thead>
+        
+                <tbody>
+                %for row in rows:
+                    <tr class="active-row">
+                        %for col in row:
+                            <td>{{col}}</td>
+                        %end
+                    </tr>
+                %end
+                </tbody> 
+            </table>
+            %else:
+             <p class="delete_table_last_p">Resultados de Busqueda</p>
+            %end  
+            <div class="delete_success">
+                % if defined('delete'):
+                    <p class="delete_succes_text">Cliente con ID: {{delete}} ah sido eliminado</p>
+                % elif defined('fail_id'):
+                    <p class="delete_fail_text">{{fail_id}}</p> 
+                %end
+            </div>
+        </div>
+
+</main>

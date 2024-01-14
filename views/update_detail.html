@@ -1,0 +1,15 @@
+% rebase('layout.html', title='Actualizacion Detallada')
+<main class="update_detail_main">
+    <div class="img_container"><img src="../views/static/images/check.webp"></div>
+    <div class="update_detail_container">
+    % if defined('full_name') and defined('f_phone') and defined('s_phone') and defined('address'):
+        <h1>Datos Actualizados:</h1>
+        <h3>Nuevo Nombre: {{full_name}}</h3>
+        <h3>Nuevo Primer Telefono: {{f_phone}}</h3>
+        <h3>Nuevo Segundo Telefono: {{s_phone}}</h3>
+        <h3>Nueva Direccion: {{address}}</h3>
+    %else:
+        <h3>{{fail_update}}</h3>
+   %end
+</div> 
+</main>

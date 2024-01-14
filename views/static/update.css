@@ -1,0 +1,123 @@
+.check_update_main_container{
+    position: relative;
+    width: 50em;
+    /* height: 80%; */
+    display: flex;
+    justify-content:center;
+    /* border: 1px solid; */
+    top: 5em;
+    
+}
+
+.check_update_title_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.check_update_title{
+    padding: 1em;
+    text-align: center;
+    color: #0000009e;
+    font-size: 1em;
+}
+
+
+.check_update_container{
+    /* width: 100%; */
+    height: 37em;
+    background: #fff;
+    /* position: relative; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-right: 3em;
+    /* border: 1px solid; */
+    
+    /* position: absolute; */
+}
+
+
+
+.check_update_client_box_user{
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* border: 2px solid; */
+    
+}
+
+
+
+
+.check_box{
+    max-width:20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.check_box label{
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 12px; */
+    font-size: 1em;
+    color: #0000009e;
+    pointer-events: none;
+    /* transition: 0.2s; */
+}
+
+.check_update_name{
+    
+    width: 50%;
+    font-size: 1em;
+    margin: 16px 0px;
+    outline: none;
+    border-width: 0px 0px 2px 0px;
+    border-color: #30de98;
+}
+
+
+
+.check_update_client_btn, .update_btn{
+    width: 30%;
+    background: linear-gradient(45deg , rgb(14, 214, 147) , #66f0ff);
+    border: none;
+    padding: 3px 5px;
+    margin-top: 3px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    /* transition: 0.2s; */
+}
+
+.check_id, .update_name, .update_first_phone, .update_second_phone, .update_address{
+    width: 50%;
+    font-size: 1em;
+    margin: 16px 0px;
+    outline: none;
+    border-width: 0px 0px 2px 0px;
+    border-color: #30de98;
+}
+
+.update_client_box_user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+/* === RESPONSE==== */
+.update_client_response p{
+    color:rgb(239, 103, 103);
+    font-weight: bold;
+    font-size: 1em;
+
+}

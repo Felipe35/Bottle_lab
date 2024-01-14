@@ -1,0 +1,10 @@
+% rebase('layout.html', title='Bienvenida')
+<div class="wellcome_index">
+    <div><img src="../views/static/images/lab_1.png" alt="microscopy"></div>
+    <h1>Mi Laboratorio, un lugar donde amo trabajar!</h1>
+</div>
+<div class="welcome_index">
+    %if defined('name') and defined('bienvenido'):
+        <h3>{{bienvenido}} {{name}}</h3>
+    %end
+</div>

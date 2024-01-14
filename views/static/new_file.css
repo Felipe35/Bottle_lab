@@ -1,0 +1,129 @@
+.file_main_container{
+    position: relative;
+    width: 60em;
+    height: 22em;
+    display: flex;
+    justify-content:center;
+    /* border: 1px solid; */
+    top: 5em;
+    
+}
+
+
+.file_title{
+    text-align: center;
+    color: #0000009e;
+}
+
+
+.file_container{
+    width: 30%;
+    height: 100%;
+    background: #fff;
+    /* position: relative; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-right: 2em;
+    /* border: 1px solid; */
+    /* position: absolute; */
+}
+
+.file_client_box_user{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.file_client_box_user {
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* border: 2px solid; */
+    
+}
+
+
+
+.file_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.file_box label{
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 12px; */
+    font-size: 1em;
+    color: #0000009e;
+    pointer-events: none;
+    /* transition: 0.2s; */
+}
+
+.name, .file{
+    width: 100%;
+    font-size: 1em;
+    margin: 16px 0px;
+    outline: none;
+    border-width: 0px 0px 2px 0px;
+    border-color: #30de98;
+}
+
+
+
+
+.file_client_btn{
+    width: 50%;
+    background: linear-gradient(45deg , rgb(14, 214, 147) , #66f0ff);
+    border: none;
+    padding: 3px 5px;
+   
+    margin-top: 2em;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    /* transition: 0.2s; */
+}
+
+.add_file{
+    margin-top: 1em;
+    color: rgb(60, 175, 224)
+}
+
+.add_file_lbl{
+    margin-top: 1em;
+}
+
+.file_container_response{
+    margin-top: 2em;
+}
+.file_msn_fail{
+    color: rgb(239, 103, 103);
+}
+
+/* .file_msn_success{
+    color: rgb(8, 213, 100);
+} */
+
+.file_succes_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.file_succes_box{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 4px;
+}
+
+.file_succes_box img{
+    width: 1em;
+}

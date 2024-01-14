@@ -1,0 +1,14 @@
+% rebase('layout.html', title='Mostrar Archivo')
+
+    <div class="show_file_container">
+        % if defined('no_file'):
+            <p>{{no_file}}</p>
+            
+        % elif defined('file'):
+        <iframe src="/views/static/{{file}}" frameborder="0"  width="900" height="900"></iframe>
+            <!-- <h3>Por favor introduce el nombre del cliente y archivo</h3> -->
+        %end
+    </div>
+
+
+   

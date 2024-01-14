@@ -1,0 +1,65 @@
+/* BODY STYLES */
+/* body{
+    width: 80%;
+    
+    
+    background: linear-gradient(45deg , rgb(14, 214, 147) , #66f0ff)
+} */
+
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    color: rgb(24, 31, 31);
+    /* width: 20%; */
+    height: 100vh;
+    background: linear-gradient(45deg , rgb(14, 214, 147) , #66f0ff);
+    /* border: 40px solid; */
+
+
+}
+
+.welcome_box{
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* .welcome_box h3{
+    
+    top: 27px;
+} */
+
+
+
+.welcome_box h3{
+    bottom: 10px;
+}
+
+.welcome h3 img{
+    width: 4em;
+    /* border: 1px solid; */
+    
+}
+
+.welcome h3{
+    position: relative;
+}
+
+.welcome_index{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.welcome_index h3{
+    text-align: center;
+    top: 10px;
+    
+}

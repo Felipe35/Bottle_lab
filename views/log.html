@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h2>Iniciar Seccion</h2>
+            <form action="/" method="post">
+
+                <div class="input_box">
+                    <input name="name" type="text" class="name">
+                    <label>Usuario</label>
+                </div>
+
+                <div class="input_box">
+                    <input name="pass" type="text" class="password" name="pass" >
+                    <label>Contrasena</label>
+                    
+
+                <!-- <div class="forgot_password"><a href="#">Forgot Password ?</a></div> -->
+
+                <button class="login_button" type="submit">Entrar</button>
+                <div class="check_log">
+                    % if defined('log_fail'):
+                        <p class="log_msn">{{log_fail}}</p>
+                    %end
+                </div>
+                <div class="signup_link"><a href="signup.html">Don't have an Account ?</a></div>
+
+
+            </form>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+

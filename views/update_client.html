@@ -1,0 +1,67 @@
+% rebase('layout.html', title='Actualizar Datos Cliente')
+<main class="check_update_main_container">
+    <div class="check_update_container">
+        <div class="check_box">
+            <h3 class="check_update_title">Ingrese el  nombre del cliente para actualziar su base de datos</h3>
+        <form action="/show_client_id_name" method="post" >
+            <div class="check_update_client_box_user">
+                <input name="name" type="text" class="check_update_name">
+                <label>Nombre del Cliente</label>
+                <button type="submit" value="Submit" class="check_update_client_btn">Ingresar</button>
+            </div>
+   
+        </form>
+
+
+            <form action="/update_client" method="post" >
+                <div class="update_client_box_user">
+                    <input name="client_id" type="text" class="check_id">
+                    <label>Ciente ID</label>
+                    <input name="full_name" type="text" class="update_name">
+                    <label>Nombre del Cliente</label>
+                    <input name="first_phone" type="text" class="update_first_phone">
+                    <label>Telefono Principal</label>
+                    <input name="second_phone" type="text" class="update_second_phone">
+                    <label>Telefono Opt</label>
+                    <input name="address" type="text" class="update_address">
+                    <label>Direccion</label>
+                    <button type="submit" value="Submit" class="update_btn">Ingresar</button>
+                </div>
+                <!-- <p><input type="reset" value="Reset"></p> -->
+            </form>
+        </div>
+    </div>
+
+        <div class="update_client_response">
+            % if defined('no_exists'):
+                <p>Client {{no_exists}} no existe</p>
+            %elif defined('rows'):
+    
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Cliente ID</th>
+                        <th>Nombre</th>
+                        
+                    </tr>
+                </thead>
+        
+                <tbody>
+                %for row in rows:
+                    <tr class="active-row">
+                        %for col in row:
+                            <td>{{col}}</td>
+                        %end
+                    </tr>
+                %end
+                </tbody> 
+            %end
+        </div>  
+    
+</main>
+
+
+
+            
+
+      

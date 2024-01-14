@@ -1,0 +1,32 @@
+<form action="/show_client" method="post" >
+    <p><input name="full_name" type="text">Nombre del Cliente</p>
+    <p><input type="submit"></p>
+
+    <div>
+        % if defined('blank'):
+            <p>{{blank}}</p>
+
+        %elif defined('no_exists'):
+            <p>Client {{no_exists}} no existe</p>
+
+        %elif defined('rows'):
+        <table>
+            <tr><th>Cliente ID</th><th>Nombre</th></tr>
+            %for row in rows:
+                <tr>
+                %for col in row:
+                     <td>{{col}}</td>     
+                %end
+                </tr>
+            %end   
+        </table>
+        %end
+    </div>
+    
+
+</form>
+
+<form action="/show_file" method="post" >
+    <p><input name="file_name" type="text">Nombre del archivo</p>
+    <p><input type="submit"></p>
+</form>  

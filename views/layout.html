@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/header.css">
+    <link rel="stylesheet" href="./static/body.css">
+    <link rel="stylesheet" href="./static/search.css">
+    <link rel="stylesheet" href="./static/new_client.css">
+    <link rel="stylesheet" href="./static/new_file.css">
+    <link rel="stylesheet" href="./static/update.css">
+    <link rel="stylesheet" href="./static/update_detail.css">
+    <link rel="stylesheet" href="./static/delete.css">
+
+
+
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="navigation_bar">
+        <div class="box">
+
+            <div class="logo_text"><img src="../views/static/images/lab_1.png" alt="microscopy"></div>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/home">Inicio</a></li>
+                    <li><a href="/show_client">Busqueda de Cliente</a></li>
+                    <li><a href="/add_client">Cliente Nuevo</a></li>
+                    <li><a href="/add_new_file">Nuevo Archivos</a></li>
+                    <li><a href="/update_client">Actualizar Cliente</a></li>
+                    <li><a href="/show_client_delete">Borrar Cliente</a></li>
+                    <span class="slider"></span>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <div class="welcome">
+        <div class="welcome_box">
+            <div>{{!base}}</div>
+        <!-- <h4>Sabemos lo que hacemos, porque lo hacemos bien!</h4> -->
+        </div>
+    </div>
+
+</body>
+<script src="./static/script.js"></script>
+</html>

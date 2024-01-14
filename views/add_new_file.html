@@ -1,0 +1,84 @@
+% rebase('layout.html', title='Archivo Adiccional')
+<main class="file_main_container">
+    <div class="file_container">   
+        <div class="file_box">
+            <h3 class="file_title">Nuevo Archivo</h3>
+        
+        <form action="/add_new_file" method="post" >
+            <div class="file_client_box_user">
+                <input name="full_name" type="text" class="name">
+                <label>Nombre del Cliente</label>
+                <input name="file_name" type="file" class="file">
+                <button type="submit" value="Submit" class="file_client_btn">Ingresar</button>
+
+                <div class="file_container_response">
+                    % if defined('blank'):
+                        <p class="file_msn_fail">{{blank}}</p>
+                    
+                    % elif defined('no_exists'):
+                        <p class="file_msn_fail">El cliente: {{no_exists}} no existe</p>
+
+                    % elif defined('only_name_exists'):
+                        <p class="file_msn_fail">El cliente: {{only_name_exists}} si existe pero debes adjuntar nombre y archivo a la ves</p>
+
+                    % elif defined('full_name') and defined('file_status'):
+                        <div class="file_succes_container">
+                            <div class="file_succes_box">
+                                <p class="file_msn_success">Archivo: {{file_status}}</p>
+                                <img src="../views/static/images/check.webp">
+                            </div>
+                            <div class="file_succes_box">
+                                <p class="file_msn_succes">Cliente: {{full_name}}</p>
+                                <img src="../views/static/images/check.webp">
+                            </div>
+                        </div>
+                    %end
+                </div>
+            </div>
+    </form>
+
+        </div>
+   </div>
+</main>
+
+
+<!-- 
+    <main class="add_main_container">
+        <div class="add_container">
+            <div class="add_box">
+                <h3 class="add_title">Nuevo Cliente</h3>
+                <form action="/add_client" method="post" >
+                    <div class="add_client_box_user">
+                        <input name="full_name" type="text" class="add_name">
+                            <label>Nombre del Cliente</label>
+                        <input name="age" type="text" class="add_age">
+                            <label>Edad</label>
+                        <input name="address" type="datetime" class="add_address">
+                            <label>Direccion</label>
+                        <input name="first_phone" type="text" class="add_firs_phone">
+                            <label>*Telefono</label>
+                        <input name="second_phone" type="text" class="add_second_phone">
+                            <label>Telefono Opt</label>
+                        
+                        <input name="file" type="file" value="Submit" class="add_file">
+                        <label class="add_file_lbl">Adjuntar Archivo</label>
+                    
+                       
+                        <button  type="submit" value="Submit" class="add_client_btn">Ingresar</button>
+                    </div>
+                    
+                </form>
+    
+                <div class="add_msn_response">
+                % if defined('file_status'):
+                    <p class="add_msn_text">Archivo: {{file_status}} cargado!<img src="../views/static/images/check.webp"></p>
+                    <p class="add_msn_text">Contacto: {{full_name}} cargado!<img src="../views/static/images/check.webp"></p>
+                % else:
+                    <p class="add_msn_text_fail">Los datos aun no han sido cargados</p>
+                %end
+                </div>
+            </div>
+        </div>
+    
+    </main> -->
+    

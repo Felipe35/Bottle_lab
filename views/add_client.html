@@ -1,0 +1,39 @@
+% rebase('layout.html', title='Anadir Cliente')
+<main class="add_main_container">
+    <div class="add_container">
+        <div class="add_box">
+            <h3 class="add_title">Nuevo Cliente</h3>
+            <form action="/add_client" method="post" >
+                <div class="add_client_box_user">
+                    <input name="full_name" type="text" class="add_name">
+                        <label>Nombre del Cliente</label>
+                    <input name="age" type="text" class="add_age">
+                        <label>Edad</label>
+                    <input name="address" type="datetime" class="add_address">
+                        <label>Direccion</label>
+                    <input name="first_phone" type="text" class="add_firs_phone">
+                        <label>*Telefono</label>
+                    <input name="second_phone" type="text" class="add_second_phone">
+                        <label>Telefono Opt</label>
+                    
+                    <input name="file" type="file" value="Submit" class="add_file">
+                    <label class="add_file_lbl">Adjuntar Archivo</label>
+                
+                    <!-- <p><input type="reset" value="Reset"></p> -->
+                    <button  type="submit" value="Submit" class="add_client_btn">Ingresar</button>
+                </div>
+                
+            </form>
+
+            <div class="add_msn_response">
+            % if defined('file_status'):
+                <p class="add_msn_text">Archivo: {{file_status}} cargado!<img src="../views/static/images/check.webp"></p>
+                <p class="add_msn_text">Contacto: {{full_name}} cargado!<img src="../views/static/images/check.webp"></p>
+            % else:
+                <p class="add_msn_text_fail">Los datos aun no han sido cargados</p>
+            %end
+            </div>
+        </div>
+    </div>
+
+</main>
